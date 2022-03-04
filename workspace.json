@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "projects": {
+    "api": "apps/api",
+    "api-interfaces": "libs/api-interfaces",
+    "stack-dog": "apps/stack-dog",
+    "stack-dog-e2e": "apps/stack-dog-e2e"
+  }
+}

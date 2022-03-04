@@ -1,0 +1,28 @@
+{
+  "root": "apps/stack-dog-e2e",
+  "sourceRoot": "apps/stack-dog-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/stack-dog-e2e/cypress.json",
+        "devServerTarget": "stack-dog:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "stack-dog:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/stack-dog-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["stack-dog"]
+}
